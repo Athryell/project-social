@@ -1,0 +1,32 @@
+{% load static %}
+
+<article class="border rounded">
+    <div class="media-body">
+        <div class="article-metadata">
+            {% if user.is_authenticated %}
+                <span><a href="{% url 'profile' user_id=post.user.id username=post.user.username %}">{{ post.user }}</a></span>
+            {% else %}
+                <span><a href="{% url 'login' %}">{{ post.user }}</a></span>
+            {% endif %}
+            <small class="text-muted">{{ post.created_date|date:"M d, Y - f a" }}</small>
+        </div>
+        <div class="article-content">
+            <p>{{ post.content }}</p>
+        </div>
+        <div class="article-buttons">
+            {% if post.user == request.user %}
+                <img class="edit-post" src="{% static 'images/pen.png' %}" alt="edit-pen">
+                <input hidden data-id="{{ post.id }}" value="Save" type="submit" class="btn btn-success btn-sm">
+            {% else %}
+                <div></div>
+            {% endif %}
+
+            <span class="likes">
+                <img class="like-icon" data-id="{{ post.id }}" src="{% static 'images/like-white.png'%}" alt="like button">
+                <img hidden class="unlike-icon" data-id="{{ post.id }}" src="{% static 'images/like-red.png'%}" alt="unlike button">
+                <span class="like-count" data-likes="{{ post.likes }}"></span>
+            </span>
+
+        </div>
+    </div>
+</article>

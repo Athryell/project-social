@@ -1,0 +1,45 @@
+{% extends 'network/layout.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="container user-info">
+        <img src={% static 'images/user_placeholder.png' %} alt="placeholder picture">
+        <h1>{{ user_profile.username }}</h1>
+    </div>
+    <div class="container follow-box">
+        <div class='follow-col'>
+            <span>Following: {{ user_profile.following.all|length }}</span>
+        </div>
+        <div class="follow-col">
+            <span>Followed_by: {{ user_profile.followed_by.all|length }}</span>
+            {% if request.user != user_profile %}
+                {% if user_profile not in request.user.following.all %}
+                    <form action="{% url 'follow' user_to_follow_id=user_profile.id toFollow=1 %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" class="follow-btn" value="Follow"></input>
+                    </form>
+                {% else %}
+                    <form action="{% url 'follow' user_to_follow_id=user_profile.id toFollow=0 %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" class="follow-btn" value="Un-follow"></input>
+                    </form>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    <hr>
+    <div class="container post-container">
+        {% for post in user_posts %}
+            {% include "network/display_post.html" %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/follow.js' %}"></script>
+{% endblock %}
+
+""" Number of followers and follows.
+For any other user who is signed in, “Follow” or “Un follow” button. a user should not be able to follow themselves."""

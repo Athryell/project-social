@@ -1,0 +1,80 @@
+{% load static %}
+{{ request.user.id|json_script:"user_id" }}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+
+        {{ request.user.username|json_script:"user-username" }}
+        {{ request.user.email|json_script:"user-email" }}
+        {% with url_name=request.path %}
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+            <a class="navbar-brand" href="#">Network</a>
+            <div class="flex-grow-1">
+                <ul class="navbar-nav nav-tabs">
+                    <li class="nav-item">
+                        {% url 'index' as ind %}
+                        <a class="nav-link {% if url_name == ind %}active{% endif %}" href="{% url 'index' %}">All Posts</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                        {% url 'write' as wrt %}
+                            <a class="nav-link {% if url_name == wrt %}active{% endif %}" href={% url "write" %}>Write new post</a>
+                        </li>
+                        <li class="nav-item">
+                        {% url 'following_posts' as fol_pos %}
+                            <a class="nav-link {% if url_name == fol_pos %}active{% endif %}" href="{% url 'following_posts' %}">Following</a>
+                        </li>    
+                    {% else %}
+                        <li class="nav-item">
+                        {% url 'login' as logi %}
+                            <a class="nav-link {% if url_name == logi %}active{% endif %}" href="{% url 'login' %}">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                        {% url 'register' as reg %}
+                            <a class="nav-link {% if url_name == reg %}active{% endif %}" href="{% url 'register' %}">Register</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div>
+                <ul class="navbar-nav" id="left-navbar">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                        {% url 'profile' as prof %}
+                            <a class="nav-link {% if url_name == prof %}active{% endif %}" href="{% url 'profile' user_id=request.user.id username=request.user.username %}"><strong>{{ user.username }}</strong></a>
+                        </li>
+                        <li class="nav-item">
+                        {% url 'logout' as logo %}
+                            <a class="nav-link {% if url_name == logo %}active{% endif %}" href="{% url 'logout' %}">Log Out</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        {% endwith %}
+        <div class="container messages">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+        <div class="body container">
+            {% block body %}
+            {% endblock %}
+        </div>
+        <script src="{% static 'network/scripts.js' %}"></script>
+        {% block script %}
+        {% endblock %}
+    </body>
+</html>

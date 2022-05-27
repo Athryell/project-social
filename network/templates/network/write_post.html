@@ -1,0 +1,16 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {{ message }}
+    <div id="compose-container">
+        <div id="compose-view">
+            <h3>New post</h3>
+            <form id="new-post-form" action="{% url 'create_post' %}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {{ post_form.as_p }}
+                <input type="submit" id="submit" class="btn btn-success mt-3" value="Post">
+            </form>
+        </div>
+    </div>
+{% endblock %}
