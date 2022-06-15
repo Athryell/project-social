@@ -22,8 +22,12 @@
             {% endif %}
 
             <span class="likes">
-                <img class="like-icon" data-id="{{ post.id }}" src="{% static 'images/like-white.png'%}" alt="like button">
-                <img hidden class="unlike-icon" data-id="{{ post.id }}" src="{% static 'images/like-red.png'%}" alt="unlike button">
+                {% if user.is_authenticated %}
+                    <img class="like-icon" data-id="{{ post.id }}" src="{% static 'images/like-white.png'%}" alt="like button">
+                    <img hidden class="unlike-icon" data-id="{{ post.id }}" src="{% static 'images/like-red.png'%}" alt="unlike button">
+                {% else %}
+                    <span class="like-tooltip"><img src="{% static 'images/like-white.png'%}" alt="like button"></span>
+                {% endif %}
                 <span class="like-count" data-likes="{{ post.likes }}"></span>
             </span>
 

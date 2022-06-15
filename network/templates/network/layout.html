@@ -44,6 +44,7 @@
                     {% endif %}
                 </ul>
             </div>
+
             <div>
                 <ul class="navbar-nav" id="left-navbar">
                     {% if user.is_authenticated %}
@@ -60,6 +61,7 @@
             </div>
         </nav>
         {% endwith %}
+
         <div class="container messages">
             {% if messages %}
                 {% for message in messages %}

@@ -3,6 +3,16 @@
 {% block body %}
     {% include "network/paginator.html" %}
 
+    {% if not user.is_authenticated %}
+    <p class="alert-info p-3 text-center">
+        This is a demo, but if you want to test the app a user is provided for a quick <a href="{% url 'login' %}">Log In</a>.<br>
+    </p>
+    {% else %}
+    <p class="alert-info p-3 text-center">
+        This is a demo. Enjoy :)<br>
+    </p>
+    {% endif %}
+
     <div class="container post-container">
         {% for post in page_obj %}
             {% include "network/display_post.html" %}

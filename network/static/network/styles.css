@@ -106,6 +106,30 @@ article, #compose-view{
     width: 20px;
 }
 
+.like-tooltip {
+    position: relative;
+}
+
+.like-tooltip::after {
+    position: absolute;
+    content: 'Login to like';
+    left: 50%;
+    top: 120%;
+    transform: translateX(-50%);
+    width: max-content;
+    background-color: rgb(221, 221, 221);
+    z-index: 3;
+    padding: 0.25em 0.75em;
+    color: var(--col-lightest);
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.like-tooltip:hover::after {
+    opacity: 1;
+}
+
 /* Pagination */
 
 .pagination *{

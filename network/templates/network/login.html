@@ -2,6 +2,11 @@
 
 {% block body %}
 
+    <p class="alert-info p-3 text-center">
+       You can just press "Login" to try the app.<br>
+        (Username: <strong>Demo_User</strong> - Pw: <strong>user</strong>)
+    </p>
+
     <h2>Login</h2>
 
     {% if message %}
@@ -11,10 +16,10 @@
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
-            <input autofocus class="form-control" type="text" name="username" placeholder="Username">
+            <input autofocus class="form-control" type="text" name="username" placeholder="Username" value="Demo_User">
         </div>
         <div class="form-group">
-            <input class="form-control" type="password" name="password" placeholder="Password">
+            <input class="form-control" type="password" name="password" placeholder="Password" value="user">
         </div>
         <input class="btn btn-primary" type="submit" value="Login">
     </form>
