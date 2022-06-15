@@ -1,0 +1,425 @@
+[
+{
+  "model": "network.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$O0co5oYQoJBe2BICTk9RRF$zesaZ6s7CEKMyZ3HQl2iOMaFcp+S3KTrPb9+0WHLP4g=",
+    "last_login": "2022-01-22T12:11:00Z",
+    "is_superuser": false,
+    "username": "Alepro",
+    "first_name": "",
+    "last_name": "",
+    "email": "ale@pro.it",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-01-17T16:34:59Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [
+      2,
+      3
+    ],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$ATl3guXw9HA7dIxPY7t3ty$8kZ7AdZ+UwbrQLM8BwUn2IpgDaRscuCXMsJdogB9n6o=",
+    "last_login": "2022-01-25T11:13:50.753Z",
+    "is_superuser": true,
+    "username": "Ale",
+    "first_name": "",
+    "last_name": "",
+    "email": "ale@ale.it",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-01-17T17:04:13.580Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [
+      3,
+      7
+    ],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 3,
+  "fields": {
+    "password": "Alfred",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Alfred",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-01-22T21:54:49Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [
+      2
+    ],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 4,
+  "fields": {
+    "password": "Bob",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Bob",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-01-22T21:55:21Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [
+      3
+    ],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 5,
+  "fields": {
+    "password": "Chloe",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Chloe",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-01-24T17:05:38Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 6,
+  "fields": {
+    "password": "Doughnut",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Doughnut",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-01-24T17:06:01Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 7,
+  "fields": {
+    "password": "Elephant",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Elephant",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-01-24T17:07:06Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$WYuAluAyzbTiaUIraZJYmx$xbWu5tlf56pRFAhxQqcnC8aACwJS5tqMTUJ9EfSvT9Q=",
+    "last_login": "2022-06-15T15:44:30Z",
+    "is_superuser": true,
+    "username": "Athryell",
+    "first_name": "",
+    "last_name": "",
+    "email": "aleprovvi@yahoo.it",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-06-15T15:33:03Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$aDRJfP9SCE6AyGUivBLuKD$tp8E/3vhxUc2Z0tU4TymxrQoL0iXi/EQ1SwbOeUs4ns=",
+    "last_login": "2022-06-15T16:02:24.874Z",
+    "is_superuser": false,
+    "username": "Demo_User",
+    "first_name": "",
+    "last_name": "",
+    "email": "demo@user.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-15T15:34:57Z",
+    "groups": [],
+    "user_permissions": [],
+    "following": [
+      2,
+      3
+    ],
+    "post_liked": []
+  }
+},
+{
+  "model": "network.post",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "content": "Welcome to our website!",
+    "created_date": "2022-01-22T12:19:26.271Z",
+    "likes": 20
+  }
+},
+{
+  "model": "network.post",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "content": "This is a test for a very long post to check if the styles and the boxes work as intended",
+    "created_date": "2022-01-22T12:43:07.616Z",
+    "likes": 3
+  }
+},
+{
+  "model": "network.post",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "content": "Hi!",
+    "created_date": "2022-01-22T16:04:28.805Z",
+    "likes": 12
+  }
+},
+{
+  "model": "network.post",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "content": "Elephants are great!",
+    "created_date": "2022-01-22T16:06:15.219Z",
+    "likes": 14
+  }
+},
+{
+  "model": "network.post",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "content": "New TEST!!!!!!",
+    "created_date": "2022-01-22T16:09:45.712Z",
+    "likes": 15
+  }
+},
+{
+  "model": "network.post",
+  "pk": 7,
+  "fields": {
+    "user": 3,
+    "content": "I'm Alfred!",
+    "created_date": "2022-01-23T15:38:23.133Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 8,
+  "fields": {
+    "user": 4,
+    "content": "I'm a magician",
+    "created_date": "2022-01-24T16:34:13.570Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 9,
+  "fields": {
+    "user": 4,
+    "content": "I have a question, can anyone answer please?",
+    "created_date": "2022-01-24T17:05:34.058Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 10,
+  "fields": {
+    "user": 5,
+    "content": "Of course, what is it?",
+    "created_date": "2022-01-24T17:07:36.382Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 11,
+  "fields": {
+    "user": 6,
+    "content": "I'm hungry, shall we order something?",
+    "created_date": "2022-01-24T17:07:59.250Z",
+    "likes": 87
+  }
+},
+{
+  "model": "network.post",
+  "pk": 12,
+  "fields": {
+    "user": 4,
+    "content": "Good job Dough! That was my question!",
+    "created_date": "2022-01-24T17:08:32.079Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 13,
+  "fields": {
+    "user": 6,
+    "content": "Great! A donut for me...",
+    "created_date": "2022-01-24T17:09:05.213Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 14,
+  "fields": {
+    "user": 5,
+    "content": "Nice! A pizza for me",
+    "created_date": "2022-01-24T17:09:56.515Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 15,
+  "fields": {
+    "user": 4,
+    "content": "I'd like an ice-cream",
+    "created_date": "2022-01-24T17:10:18.573Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 16,
+  "fields": {
+    "user": 7,
+    "content": "WOF WOF!",
+    "created_date": "2022-01-24T17:10:31.828Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "content": "Welcome everyone!",
+    "created_date": "2022-01-24T18:21:44.012Z",
+    "likes": 1
+  }
+},
+{
+  "model": "network.post",
+  "pk": 18,
+  "fields": {
+    "user": 7,
+    "content": "I'm not a REAL animal..",
+    "created_date": "2022-01-24T18:21:58.186Z",
+    "likes": 0
+  }
+},
+{
+  "model": "network.post",
+  "pk": 19,
+  "fields": {
+    "user": 5,
+    "content": "You don't say!",
+    "created_date": "2022-01-24T18:22:07.884Z",
+    "likes": 1
+  }
+},
+{
+  "model": "network.post",
+  "pk": 20,
+  "fields": {
+    "user": 6,
+    "content": "What are you?",
+    "created_date": "2022-01-24T18:22:17.466Z",
+    "likes": 1
+  }
+},
+{
+  "model": "network.post",
+  "pk": 21,
+  "fields": {
+    "user": 7,
+    "content": "That's a secret..",
+    "created_date": "2022-01-24T18:22:30.381Z",
+    "likes": 3
+  }
+},
+{
+  "model": "network.post",
+  "pk": 22,
+  "fields": {
+    "user": 3,
+    "content": "C'mon!!!",
+    "created_date": "2022-01-24T18:22:44.334Z",
+    "likes": 9
+  }
+},
+{
+  "model": "network.post",
+  "pk": 24,
+  "fields": {
+    "user": 2,
+    "content": "This is the second last post...",
+    "created_date": "2022-01-25T10:39:31.176Z",
+    "likes": 2
+  }
+},
+{
+  "model": "network.post",
+  "pk": 26,
+  "fields": {
+    "user": 2,
+    "content": "This is the last post!!!",
+    "created_date": "2022-01-25T11:10:25.914Z",
+    "likes": 1
+  }
+}
+]
